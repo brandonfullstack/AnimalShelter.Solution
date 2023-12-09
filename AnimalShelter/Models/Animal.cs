@@ -1,8 +1,9 @@
 namespace AnimalShelter.Models
 {
-  public class Cat
+  public class Animal
   {
-    public int CatId { get; set; }
+    public int AnimalId { get; set; }
+    public string Species { get; set; }
     public string Name { get; set; }
     public string Color { get; set; }
     public int Age { get; set; }
