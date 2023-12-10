@@ -35,7 +35,7 @@ Additionally, please install the following for versioning functionality:
 3. Create a file named `appsettings.json`: `$ touch appsettings.json`
 4. Within `appsettings.json` add the following code, replacing the `uid` and `pwd` values with your own username and password for MySQL. Replace the database value with the name that you wish to give the database that will back up this application. Entity will create the `database` for you in a subsequent step.
 
-    ```json
+```json
 {
   "Logging": {
     "LogLevel": {
@@ -48,11 +48,11 @@ Additionally, please install the following for versioning functionality:
     "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter_api;uid=root;pwd=epicodus;"
   }
 }
-    ```
+```
 
 5. Within `appsettings.Development.json` add the following code:
 
-    ```json
+```json
 {
   "Logging": {
     "LogLevel": {
@@ -63,7 +63,7 @@ Additionally, please install the following for versioning functionality:
     }
   }
 }
-    ```
+```
 
 6. Run `$ dotnet ef database update`. This command will create the database and required tables on your local machine.
 7. Navigate to the project directory: `$ cd AnimalShelter`
