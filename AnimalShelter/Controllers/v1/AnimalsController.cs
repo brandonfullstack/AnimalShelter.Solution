@@ -2,10 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
 
-namespace AnimalShelter.Controllers
+namespace AnimalShelter.Controllers.v1
 {
-  [Route("api/[controller]")]
   [ApiController]
+  [ApiVersion("1.0")]
+  [Route("api/v{version:apiVersion}/[controller]")]
+  // [Route("api/[controller]")]
   public class AnimalsController : ControllerBase
   {
     private readonly AnimalShelterContext _db;
@@ -14,6 +16,10 @@ namespace AnimalShelter.Controllers
     {
       _db = db;
     }
+
+    // [MapToApiVersion("1.0")]
+    // [HttpGet]
+    // public string Get() => ".Net Core Web API Version 1";
 
     // GET api/animals
     [HttpGet]
