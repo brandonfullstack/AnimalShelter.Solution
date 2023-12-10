@@ -8,14 +8,9 @@
 
 * _C#_
 * _.NET_
-* _ASP.NET Core Identity_
-* _Razor Pages_
 * _Entity Framework Core_
-* _HTML_
-* _CSS_
 * _Git_
 * _Swashbuckle_
-* _Pomelo_
 
 ## Description
 
@@ -29,10 +24,10 @@ Please install Entity Framework Core by running the following command in your te
 
 `$ dotnet tool install --global dotnet-ef --version 6.0.0`
 
-Additionally, please install the following for pagination functionality:
+Additionally, please install the following for versioning functionality:
 
-`$ dotnet add package Microsoft.EntityFrameworkCore.Tools --version 6.0.0`
-`$ dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.0`
+`$ dotnet add package Microsoft.AspNetCore.Mvc.Versioning`
+`$ dotnet add package Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer`
 
 
 1. Copy project directory or clone repo from Github (https://github.com/brandonfullstack/AnimalShelter.Solution) to your desktop.
@@ -73,7 +68,7 @@ Additionally, please install the following for pagination functionality:
 6. Run `$ dotnet ef database update`. This command will create the database and required tables on your local machine.
 7. Navigate to the project directory: `$ cd AnimalShelter`
 8. In the command line, run the command `$ dotnet watch run` to compile and execute the web application.
-9. Open Postman and make API calls using: http://localhost:5000.
+9. Open your browser and navigate to `https://localhost:5001/swagger` if it doesn't open for you automatically.
 
 ## Known Bugs
 
