@@ -36,33 +36,33 @@ Additionally, please install the following for versioning functionality:
 4. Within `appsettings.json` add the following code, replacing the `uid` and `pwd` values with your own username and password for MySQL. Replace the database value with the name that you wish to give the database that will back up this application. Entity will create the `database` for you in a subsequent step.
 
     ```json
-  {
-    "Logging": {
-      "LogLevel": {
-        "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-      }
-    },
+{
+  "Logging": {
+    "LogLevel": {
+    "Default": "Information",
+    "Microsoft.AspNetCore": "Warning"
+    }
+  },
     "AllowedHosts": "*",
     "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter_api;uid=root;pwd=epicodus;"
-    }
+    "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter_api;uid=root;pwd=epicodus;"
   }
+}
     ```
 
 5. Within `appsettings.Development.json` add the following code:
 
     ```json
-  {
-    "Logging": {
-      "LogLevel": {
-        "Default": "Information",
-        "Microsoft": "Trace",
-        "Microsoft.AspNetCore": "Information",
-        "Microsoft.Hosting.Lifetime": "Information"
-      }
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Trace",
+      "Microsoft.AspNetCore": "Information",
+      "Microsoft.Hosting.Lifetime": "Information"
     }
   }
+}
     ```
 
 6. Run `$ dotnet ef database update`. This command will create the database and required tables on your local machine.
